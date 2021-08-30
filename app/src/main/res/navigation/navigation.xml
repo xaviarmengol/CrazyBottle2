@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/animationFragment">
+
+    <fragment
+        android:id="@+id/animationFragment"
+        android:name="com.example.crazybottle2.AnimationFragment"
+        android:label="Rotate!"
+        tools:layout="@layout/fragment_animation" >
+        <action
+            android:id="@+id/action_animationFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_animationFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.example.crazybottle2.OptionsFragment"
+        android:label="Options"
+        tools:layout="@layout/fragment_options" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.crazybottle2.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>
